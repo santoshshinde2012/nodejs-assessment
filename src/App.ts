@@ -1,17 +1,21 @@
 import cors from 'cors';
-import express from 'express';
+import express, { Application, Request, Response, NextFunction } from 'express';
 import http from 'http';
 import helmet from 'helmet';
 import 'dotenv/config';
 import swaggerUi from 'swagger-ui-express';
+import passport from 'passport';
+import session from 'express-session';
+import { Strategy as GitHubStrategy, Profile } from 'passport-github';
 import database from './database';
 import swaggerDocument from '../swagger.json';
 import registerRoutes from './routes';
 import addErrorHandler from './middleware/error-handler';
 import logger from './lib/logger';
+import { isAuthenticated } from './middleware/authentication-middleware';
 
 export default class App {
-	public express: express.Application;
+	public express: Application;
 
 	public httpServer: http.Server;
 
@@ -21,6 +25,9 @@ export default class App {
 
 		// Assert database connection
 		await this.assertDatabaseConnection();
+
+		// passport
+		this.initPassport();
 
 		// add all global middleware like cors
 		this.middleware();
@@ -41,9 +48,23 @@ export default class App {
 	 * here register your all routes
 	 */
 	private routes(): void {
-		this.express.get('/', this.basePathRoute);
-		this.express.get('/web', this.parseRequestHeader, this.basePathRoute);
+		this.express.get('/', isAuthenticated, this.basePathRoute);
+		this.express.get('/login/github', passport.authenticate('github'));
+		this.express.get(
+			'/login/github/callback',
+			passport.authenticate('github', { failureRedirect: '/logout' }),
+			(req: Request, res: Response) => {
+				res.redirect('/web');
+			},
+		);
 		this.express.use('/api', registerRoutes());
+		this.express.get(
+			'/web',
+			this.parseRequestHeader,
+			isAuthenticated,
+			this.basePathRoute,
+		);
+		this.express.get('/logout', this.logout);
 	}
 
 	/**
@@ -70,8 +91,8 @@ export default class App {
 	}
 
 	private parseRequestHeader(
-		req: express.Request,
-		res: express.Response,
+		_req: Request,
+		_res: Response,
 		next: Function,
 	): void {
 		// parse request header
@@ -79,10 +100,7 @@ export default class App {
 		next();
 	}
 
-	private basePathRoute(
-		request: express.Request,
-		response: express.Response,
-	): void {
+	private basePathRoute(_request: Request, response: Response): void {
 		response.json({ message: 'base path' });
 	}
 
@@ -102,5 +120,59 @@ export default class App {
 			swaggerUi.serve,
 			swaggerUi.setup(swaggerDocument),
 		);
+	}
+
+	private initPassport(): void {
+		this.express.use(
+			session({
+				secret: process.env.SESSION_STORE_SECRETE,
+				resave: false,
+				saveUninitialized: true,
+			}),
+		);
+		this.express.use(passport.initialize());
+		this.express.use(passport.session());
+
+		// please add your credentials in .env file
+		const gitHubStrategyOptions = {
+			clientID: process.env.CLIENT_ID,
+			clientSecret: process.env.CLIENT_SECRETE,
+			callbackURL: process.env.CALLBACK_URL,
+		};
+		passport.use(
+			new GitHubStrategy(
+				gitHubStrategyOptions,
+				(
+					_accessToken: string,
+					_refreshToken: string,
+					profile: Profile,
+					cb,
+				) => {
+					cb(null, profile);
+				},
+			),
+		);
+
+		passport.serializeUser((user: Profile, done) => {
+			done(null, user);
+		});
+
+		passport.deserializeUser((user: Profile, done) => {
+			done(null, user);
+		});
+	}
+
+	private logout(
+		request: Request,
+		response: Response,
+		_next: NextFunction,
+	): void {
+		try {
+			request.logout((error) => logger.error(error));
+			response.redirect('/login/github');
+		} catch (error) {
+			logger.error('Error during logout:', error);
+			response.status(500).send('Error during logout');
+		}
 	}
 }

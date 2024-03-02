@@ -10,6 +10,11 @@
 - Primary
     - Node JS and Expreess JS
     - Typescript
+    - SSO
+        - Passport js and Passport Github
+        - Express Session
+    - Logger
+        - Winston
 - Testing
     - Jest
 - Dtabase

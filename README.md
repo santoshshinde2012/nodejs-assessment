@@ -17,7 +17,7 @@
 - [x] `http-status-codes`
 - [x] `winston`, `@types/winston`
 - [x] `sequelize`, `pg`, `pg-hstore`
-
+- [x] `passport`, `passport-github`, `express-session`
 
 ## Start The application in Development Mode
 
