@@ -132,33 +132,38 @@ export default class App {
 		this.express.use(passport.initialize());
 		this.express.use(passport.session());
 
-		// please add your credentials in .env file
-		const gitHubStrategyOptions = {
-			clientID: process.env.CLIENT_ID,
-			clientSecret: process.env.CLIENT_SECRETE,
-			callbackURL: process.env.CALLBACK_URL,
-		};
-		passport.use(
-			new GitHubStrategy(
-				gitHubStrategyOptions,
-				(
-					_accessToken: string,
-					_refreshToken: string,
-					profile: Profile,
-					cb,
-				) => {
-					cb(null, profile);
-				},
-			),
-		);
+		const { CLIENT_ID, CLIENT_SECRETE, CALLBACK_URL } = process.env;
 
-		passport.serializeUser((user: Profile, done) => {
-			done(null, user);
-		});
+		if (CLIENT_ID && CLIENT_SECRETE && CALLBACK_URL) {
+			// please add your credentials in .env file
+			const gitHubStrategyOptions = {
+				clientID: CLIENT_ID,
+				clientSecret: CLIENT_SECRETE,
+				callbackURL: CALLBACK_URL,
+			};
+			passport.use(
+				new GitHubStrategy(
+					gitHubStrategyOptions,
+					(
+						_accessToken: string,
+						_refreshToken: string,
+						profile: Profile,
+						cb,
+					) => {
+						cb(null, profile);
+					},
+				),
+			);
 
-		passport.deserializeUser((user: Profile, done) => {
-			done(null, user);
-		});
+			passport.serializeUser((user: Profile, done) => {
+				done(null, user);
+			});
+
+			passport.deserializeUser((user: Profile, done) => {
+				done(null, user);
+			});
+		}
+
 	}
 
 	private logout(
