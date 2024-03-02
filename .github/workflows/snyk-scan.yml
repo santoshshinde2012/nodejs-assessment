@@ -1,5 +1,12 @@
 name: Snyk Scan
-on: [pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
 jobs:
   security:
     runs-on: ubuntu-latest
