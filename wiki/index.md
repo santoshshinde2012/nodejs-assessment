@@ -110,3 +110,5 @@
 - Unit Test Cases
     - Created unit test cases using Jest with 90+ code coverage.
     - Tried to cover positive and negative scenerio
+    - Code Coverage Report
+      ![ Code Coverage Report](./assets/unit-test.png)
