@@ -61,7 +61,6 @@ export default class App {
 		this.express.get(
 			'/web',
 			this.parseRequestHeader,
-			isAuthenticated,
 			this.basePathRoute,
 		);
 		this.express.get('/logout', this.logout);

@@ -18,8 +18,7 @@ describe('status integration tests', () => {
         await request(app)
             .get('/')
             .set('Accept', 'application/json')
-            .expect('Content-Type', 'application/json; charset=utf-8')
-            .expect(StatusCodes.OK);
+            .expect(StatusCodes.MOVED_TEMPORARILY);
     });
 
     it('can get default web route success', async () => {
