@@ -1,0 +1,773 @@
+{
+	"info": {
+		"name": "assessment"
+	},
+	"item": [
+		{
+			"name": "organizations",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/organizations",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/organizations/7cf916b4-8d04-4235-b47a-47d82169d4f5",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"organizations",
+								"7cf916b4-8d04-4235-b47a-47d82169d4f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organization 1\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/organizations",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organization 1\",\n    \"country\": \"France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/organizations/7cf916b4-8d04-4235-b47a-47d82169d4f5",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"organizations",
+								"7cf916b4-8d04-4235-b47a-47d82169d4f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/organizations/7cf916b4-8d04-4235-b47a-47d82169d4f5",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"organizations",
+								"7cf916b4-8d04-4235-b47a-47d82169d4f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPropertiesByOrganizationId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/organizations/7cf916b4-8d04-4235-b47a-47d82169d4f5/properties",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"organizations",
+								"7cf916b4-8d04-4235-b47a-47d82169d4f5",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "properties",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/properties",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/properties/9c3b18be-e1f8-435e-b70c-f216dfdc312a",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"properties",
+								"9c3b18be-e1f8-435e-b70c-f216dfdc312a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/properties",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/properties/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"properties",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/properties/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"properties",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "regions",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/regions",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/regions/9c3b18be-e1f8-435e-b70c-f216dfdc312a",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"regions",
+								"9c3b18be-e1f8-435e-b70c-f216dfdc312a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/regions",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/regions/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"regions",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/regions/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"regions",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "fields",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/fields",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/fields/9c3b18be-e1f8-435e-b70c-f216dfdc312a",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"fields",
+								"9c3b18be-e1f8-435e-b70c-f216dfdc312a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/fields",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/fields/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"fields",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/fields/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"fields",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crops",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crops",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crops/9c3b18be-e1f8-435e-b70c-f216dfdc312a",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crops",
+								"9c3b18be-e1f8-435e-b70c-f216dfdc312a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crops",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crops/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crops",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crops/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crops",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crop-cycles",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crop-cycles",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crop-cycles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crop-cycles/9c3b18be-e1f8-435e-b70c-f216dfdc312a",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crop-cycles",
+								"9c3b18be-e1f8-435e-b70c-f216dfdc312a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"India\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crop-cycles",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crop-cycles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Organisation 3\",\n    \"country\": \"France\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crop-cycles/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crop-cycles",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_V1}}/crop-cycles/ea8d6021-770a-4dfc-a390-5c38b1442215",
+							"host": [
+								"{{BASE_URL_V1}}"
+							],
+							"path": [
+								"crop-cycles",
+								"ea8d6021-770a-4dfc-a390-5c38b1442215"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL_V1",
+			"value": "http://localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}

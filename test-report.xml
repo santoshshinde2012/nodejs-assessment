@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/region/RegionController.spec.ts">
+    <testCase name="Region Controller should register routes and return router" duration="3"/>
+    <testCase name="Region Controller should get all regions" duration="0"/>
+    <testCase name="Region Controller should handle errors to get all regions" duration="1"/>
+    <testCase name="Region Controller should get details of a specific region" duration="1"/>
+    <testCase name="Region Controller should handle errors to get all regions" duration="0"/>
+    <testCase name="Region Controller should create region" duration="0"/>
+    <testCase name="Region Controller should handle errors in create region" duration="1"/>
+    <testCase name="Region Controller should update region" duration="0"/>
+    <testCase name="Region Controller should handle errors in update region" duration="0"/>
+    <testCase name="Region Controller should delete region" duration="2"/>
+    <testCase name="Region Controller should handle errors in delete region" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/crop/CropController.spec.ts">
+    <testCase name="Crop Controller should register routes and return router" duration="3"/>
+    <testCase name="Crop Controller should get all crops" duration="1"/>
+    <testCase name="Crop Controller should handle errors to get all crops" duration="0"/>
+    <testCase name="Crop Controller should get details of a specific crop" duration="1"/>
+    <testCase name="Crop Controller should handle errors to get all crops" duration="1"/>
+    <testCase name="Crop Controller should create crop" duration="0"/>
+    <testCase name="Crop Controller should handle errors in create crop" duration="0"/>
+    <testCase name="Crop Controller should update crop" duration="1"/>
+    <testCase name="Crop Controller should handle errors in update crop" duration="0"/>
+    <testCase name="Crop Controller should delete crop" duration="0"/>
+    <testCase name="Crop Controller should handle errors in delete crop" duration="1"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/crop_cycle/CropCycleController.spec.ts">
+    <testCase name="CropCycle Controller should register routes and return router" duration="3"/>
+    <testCase name="CropCycle Controller should get all cropCycles" duration="0"/>
+    <testCase name="CropCycle Controller should handle errors to get all cropCycles" duration="1"/>
+    <testCase name="CropCycle Controller should get details of a specific cropCycle" duration="0"/>
+    <testCase name="CropCycle Controller should handle errors to get all cropCycles" duration="1"/>
+    <testCase name="CropCycle Controller should create cropCycle" duration="0"/>
+    <testCase name="CropCycle Controller should handle errors in create cropCycle" duration="0"/>
+    <testCase name="CropCycle Controller should update cropCycle" duration="1"/>
+    <testCase name="CropCycle Controller should handle errors in update cropCycle" duration="0"/>
+    <testCase name="CropCycle Controller should delete cropCycle" duration="1"/>
+    <testCase name="CropCycle Controller should handle errors in delete cropCycle" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/field/FieldController.spec.ts">
+    <testCase name="Field Controller should register routes and return router" duration="3"/>
+    <testCase name="Field Controller should get all fields" duration="0"/>
+    <testCase name="Field Controller should handle errors to get all fields" duration="1"/>
+    <testCase name="Field Controller should get details of a specific field" duration="0"/>
+    <testCase name="Field Controller should handle errors to get all fields" duration="0"/>
+    <testCase name="Field Controller should create field" duration="0"/>
+    <testCase name="Field Controller should handle errors in create field" duration="1"/>
+    <testCase name="Field Controller should update field" duration="0"/>
+    <testCase name="Field Controller should handle errors in update field" duration="0"/>
+    <testCase name="Field Controller should delete field" duration="27"/>
+    <testCase name="Field Controller should handle errors in delete field" duration="1"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/field/FieldService.spec.ts">
+    <testCase name="FieldService should return all fields" duration="1"/>
+    <testCase name="FieldService should throw error if failed to fetch fields" duration="6"/>
+    <testCase name="FieldService should return particular field by id" duration="0"/>
+    <testCase name="FieldService should throw error if failed to fetch field by id" duration="0"/>
+    <testCase name="FieldService should update field with valid input" duration="1"/>
+    <testCase name="FieldService should throw an error if it fails to update as it failed to find the field by id" duration="2"/>
+    <testCase name="FieldService should throw an error if it fails to update" duration="2"/>
+    <testCase name="FieldService should create a new field with valid input" duration="1"/>
+    <testCase name="FieldService should throw error if failed to create field" duration="2"/>
+    <testCase name="FieldService should return true if field is deleted successfully" duration="1"/>
+    <testCase name="FieldService should return false if no field is deleted" duration="0"/>
+    <testCase name="FieldService should throw error if failed to delete field" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/region/RegionService.spec.ts">
+    <testCase name="RegionService should return all regions" duration="2"/>
+    <testCase name="RegionService should throw error if failed to fetch regions" duration="5"/>
+    <testCase name="RegionService should return particular region by id" duration="18"/>
+    <testCase name="RegionService should throw error if failed to fetch region by id" duration="1"/>
+    <testCase name="RegionService should update region with valid input" duration="0"/>
+    <testCase name="RegionService should throw an error if it fails to update as it failed to find the region by id" duration="2"/>
+    <testCase name="RegionService should throw an error if it fails to update" duration="0"/>
+    <testCase name="RegionService should create a new region with valid input" duration="0"/>
+    <testCase name="RegionService should throw error if failed to create region" duration="1"/>
+    <testCase name="RegionService should return true if region is deleted successfully" duration="1"/>
+    <testCase name="RegionService should return false if no region is deleted" duration="0"/>
+    <testCase name="RegionService should throw error if failed to delete region" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/crop/CropService.spec.ts">
+    <testCase name="CropService should return all crops" duration="0"/>
+    <testCase name="CropService should throw error if failed to fetch crops" duration="19"/>
+    <testCase name="CropService should return particular crop by id" duration="0"/>
+    <testCase name="CropService should throw error if failed to fetch crop by id" duration="0"/>
+    <testCase name="CropService should update crop with valid input" duration="1"/>
+    <testCase name="CropService should throw an error if it fails to update as it failed to find the crop by id" duration="1"/>
+    <testCase name="CropService should throw an error if it fails to update" duration="1"/>
+    <testCase name="CropService should create a new crop with valid input" duration="0"/>
+    <testCase name="CropService should throw error if failed to create crop" duration="0"/>
+    <testCase name="CropService should return true if crop is deleted successfully" duration="1"/>
+    <testCase name="CropService should return false if no crop is deleted" duration="0"/>
+    <testCase name="CropService should throw error if failed to delete crop" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/services/CommonService.spec.ts">
+    <testCase name="CommonService should return properties by organization ID" duration="3"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/lib/logger.spec.ts">
+    <testCase name="Logger Lib should create a new log directory if one doesn&apos;t already exist" duration="5"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/crop_cycle/CropCycleService.spec.ts">
+    <testCase name="CropCycleService should return all cropCycles" duration="1"/>
+    <testCase name="CropCycleService should throw error if failed to fetch cropCycles" duration="18"/>
+    <testCase name="CropCycleService should return particular cropCycle by id" duration="0"/>
+    <testCase name="CropCycleService should throw error if failed to fetch cropCycle by id" duration="1"/>
+    <testCase name="CropCycleService should update cropCycle with valid input" duration="0"/>
+    <testCase name="CropCycleService should throw an error if it fails to update as it failed to find the cropCycle by id" duration="2"/>
+    <testCase name="CropCycleService should throw an error if it fails to update" duration="0"/>
+    <testCase name="CropCycleService should create a new cropCycle with valid input" duration="1"/>
+    <testCase name="CropCycleService should throw error if failed to create cropCycle" duration="0"/>
+    <testCase name="CropCycleService should return true if cropCycle is deleted successfully" duration="0"/>
+    <testCase name="CropCycleService should return false if no cropCycle is deleted" duration="0"/>
+    <testCase name="CropCycleService should throw error if failed to delete cropCycle" duration="1"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/property/PropertyService.spec.ts">
+    <testCase name="PropertyService should return all properties" duration="13"/>
+    <testCase name="PropertyService should throw error if failed to fetch properties" duration="8"/>
+    <testCase name="PropertyService should return all properties" duration="4"/>
+    <testCase name="PropertyService should throw error if failed to fetch properties" duration="1"/>
+    <testCase name="PropertyService should return particular property by id" duration="0"/>
+    <testCase name="PropertyService should throw error if failed to fetch property by id" duration="1"/>
+    <testCase name="PropertyService should update property with valid input" duration="0"/>
+    <testCase name="PropertyService should throw an error if it fails to update as it failed to find the property by id" duration="2"/>
+    <testCase name="PropertyService should throw an error if it fails to update" duration="0"/>
+    <testCase name="PropertyService should create a new property with valid input" duration="1"/>
+    <testCase name="PropertyService should throw error if failed to create property" duration="0"/>
+    <testCase name="PropertyService should return true if property is deleted successfully" duration="1"/>
+    <testCase name="PropertyService should return false if no property is deleted" duration="0"/>
+    <testCase name="PropertyService should throw error if failed to delete property" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/organisation/OrganisationController.spec.ts">
+    <testCase name="Organization Controller should register routes and return router" duration="3"/>
+    <testCase name="Organization Controller should get all organizations" duration="4"/>
+    <testCase name="Organization Controller should handle errors to get all organizations" duration="1"/>
+    <testCase name="Organization Controller should get details of a specific organization" duration="1"/>
+    <testCase name="Organization Controller should handle errors to get all organizations" duration="1"/>
+    <testCase name="Organization Controller should create organization" duration="1"/>
+    <testCase name="Organization Controller should throw BAD_REQUEST error if name and country are not provided" duration="0"/>
+    <testCase name="Organization Controller should handle errors in create organization" duration="0"/>
+    <testCase name="Organization Controller should update organization" duration="7"/>
+    <testCase name="Organization Controller should handle errors in update organization" duration="0"/>
+    <testCase name="Organization Controller should delete organization" duration="0"/>
+    <testCase name="Organization Controller should handle errors in delete organization" duration="1"/>
+    <testCase name="Organization Controller should get a list of properties owned by a specific organization" duration="0"/>
+    <testCase name="Organization Controller should call next function if an error occurs while fetching properties" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/organisation/OrganizationService.spec.ts">
+    <testCase name="OrganizationService should return all organizations" duration="1"/>
+    <testCase name="OrganizationService should throw error if failed to fetch organizations" duration="5"/>
+    <testCase name="OrganizationService should return particular organization by id" duration="1"/>
+    <testCase name="OrganizationService should throw error if failed to fetch organization by id" duration="0"/>
+    <testCase name="OrganizationService should update organization with valid input" duration="0"/>
+    <testCase name="OrganizationService should throw an error if it fails to update as it failed to find the organization by id" duration="2"/>
+    <testCase name="OrganizationService should throw an error if it fails to update" duration="0"/>
+    <testCase name="OrganizationService should create a new organization with valid input" duration="1"/>
+    <testCase name="OrganizationService should throw error if failed to create organization" duration="0"/>
+    <testCase name="OrganizationService should return true if organization is deleted successfully" duration="0"/>
+    <testCase name="OrganizationService should return false if no organization is deleted" duration="0"/>
+    <testCase name="OrganizationService should throw error if failed to delete organization" duration="1"/>
+    <testCase name="OrganizationService should return properties by organization ID" duration="0"/>
+    <testCase name="OrganizationService should throw error if failed to fetch properties by organization ID" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/middleware/error-handler.spec.ts">
+    <testCase name="ErrorHandler middleware with 0 status code" duration="3"/>
+    <testCase name="ErrorHandler middleware with 200 status code" duration="0"/>
+    <testCase name="ErrorHandler middleware with 200 status code" duration="1"/>
+    <testCase name="ErrorHandler middleware with 200 status code and updated env variables" duration="0"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/unit-tests/components/property/PropertyController.spec.ts">
+    <testCase name="Property Controller should register routes and return router" duration="0"/>
+    <testCase name="Property Controller should get all properties" duration="1"/>
+    <testCase name="Property Controller should handle errors to get all properties" duration="0"/>
+    <testCase name="Property Controller should get details of a specific property" duration="0"/>
+    <testCase name="Property Controller should handle errors to get all properties" duration="0"/>
+    <testCase name="Property Controller should create property" duration="0"/>
+    <testCase name="Property Controller should handle errors in create property" duration="0"/>
+    <testCase name="Property Controller should update property" duration="0"/>
+    <testCase name="Property Controller should handle errors in update property" duration="0"/>
+    <testCase name="Property Controller should delete property" duration="0"/>
+    <testCase name="Property Controller should handle errors in delete property" duration="1"/>
+  </file>
+  <file path="/Users/santosh/Documents/workspace/boilerplates/node-ts-sequelize-boilerplate/tests/integration-tests/app.integration.spec.ts">
+    <testCase name="status integration tests can get default route success" duration="13"/>
+    <testCase name="status integration tests can get default web route success" duration="3"/>
+  </file>
+</testExecutions>

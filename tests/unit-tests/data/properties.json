@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1476785e-a2da-47c1-a266-138c60348110",
+        "name": "Property 1",
+        "organizationId": "2b9eec45-fd45-488c-afb5-e8035e692228",
+        "createdAt": "2024-03-02T04:27:51.430Z",
+        "updatedAt": "2024-03-02T04:27:51.430Z",
+        "OrganizationId": null,
+        "organization": {
+            "id": "2b9eec45-fd45-488c-afb5-e8035e692228",
+            "name": "Organization 1"
+        }
+    },
+    {
+        "id": "774ff701-9873-4539-abd4-48d1a8ec1ff0",
+        "name": "Property 2",
+        "organizationId": "2b9eec45-fd45-488c-afb5-e8035e692228",
+        "createdAt": "2024-03-02T04:27:51.430Z",
+        "updatedAt": "2024-03-02T04:27:51.430Z",
+        "OrganizationId": null,
+        "organization": {
+            "id": "2b9eec45-fd45-488c-afb5-e8035e692228",
+            "name": "Organization 1"
+        }
+    }
+]

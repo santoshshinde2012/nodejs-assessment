@@ -1,0 +1,72 @@
+[
+    {
+        "id": "73b89322-cfb6-4a0f-b6d3-da1c351b7da1",
+        "name": "Wheat",
+        "type": "Grain",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "e6a0a7f1-2851-4e12-a98d-4ce71912a109",
+        "name": "Apple",
+        "type": "Fruit",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "c9e76d26-59c2-4e04-a676-dcb496a99f01",
+        "name": "Tomato",
+        "type": "Vegetable",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "269d5408-ecbd-4d29-b1e8-c0681c4feb2f",
+        "name": "Lentil",
+        "type": "Legume",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "b7576cfb-c237-45c6-9d52-783ad52a88a5",
+        "name": "Basil",
+        "type": "Herb",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "e4f743c6-02ea-4b62-9ce5-c18dc5668a3b",
+        "name": "Carrot",
+        "type": "Root",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "c6bad8f2-b7ac-4bcf-b3a7-3a7f52dc0927",
+        "name": "Potato",
+        "type": "Tuber",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "926c5e7e-0dfa-457a-b15d-b69c3f97c26d",
+        "name": "Sunflower",
+        "type": "Oilseed",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "6ae49aa0-46d2-45e3-9bf3-b99ad1e0eaf5",
+        "name": "Cinnamon",
+        "type": "Spice",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    },
+    {
+        "id": "b939a6b0-18ba-43f2-a760-7d9e417bd7af",
+        "name": "Tea",
+        "type": "Beverage",
+        "createdAt": "2024-03-02T04:28:05.425Z",
+        "updatedAt": "2024-03-02T04:28:05.425Z"
+    }
+]

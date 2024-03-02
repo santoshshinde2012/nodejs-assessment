@@ -1,0 +1,16 @@
+[
+    {
+        "id": "2b9eec45-fd45-488c-afb5-e8035e692228",
+        "name": "Organization 1",
+        "country": "India",
+        "createdAt": "2024-03-02T04:27:33.628Z",
+        "updatedAt": "2024-03-02T04:27:33.628Z"
+    },
+    {
+        "id": "5516c79d-8d48-4122-a7f4-2f7cd0fb7266",
+        "name": "Organization 2",
+        "country": "Ireland",
+        "createdAt": "2024-03-02T04:27:33.628Z",
+        "updatedAt": "2024-03-02T04:27:33.628Z"
+    }
+]

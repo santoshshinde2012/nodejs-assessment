@@ -1,0 +1,40 @@
+[
+    {
+        "id": "b07e2ae5-d773-41b2-8e90-6e776cee47f1",
+        "regionId": "b27e11c1-8280-41f1-bec9-cab23a980dd0",
+        "name": "Field1",
+        "geometry": {
+            "crs": {
+                "type": "name",
+                "properties": {
+                    "name": "EPSG:4326"
+                }
+            },
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0
+                    ]
+                ]
+            ]
+        },
+        "area": 100,
+        "createdAt": "2024-03-02T04:28:03.127Z",
+        "updatedAt": "2024-03-02T04:28:03.127Z",
+        "RegionId": null
+    }
+]

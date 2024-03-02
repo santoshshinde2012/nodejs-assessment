@@ -1,0 +1,90 @@
+[
+    {
+        "id": "3f88bd70-c11d-4935-9d05-57639ceb4172",
+        "propertyId": "c77a773d-6512-4ba4-8d9e-4be141752554",
+        "parentRegionId": null,
+        "name": "Region1",
+        "geometry": {
+            "crs": {
+                "type": "name",
+                "properties": {
+                    "name": "EPSG:4326"
+                }
+            },
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0
+                    ]
+                ]
+            ]
+        },
+        "area": 100,
+        "createdAt": "2024-03-02T05:30:58.719Z",
+        "updatedAt": "2024-03-02T05:30:58.719Z",
+        "parentRegion": null,
+        "subRegions": [
+            {
+                "id": "db1820c6-a4bc-4216-b3f1-f82c7b82fc57",
+                "name": "Region1"
+            }
+        ]
+    },
+    {
+        "id": "db1820c6-a4bc-4216-b3f1-f82c7b82fc57",
+        "propertyId": "c77a773d-6512-4ba4-8d9e-4be141752554",
+        "parentRegionId": "3f88bd70-c11d-4935-9d05-57639ceb4172",
+        "name": "Region1",
+        "geometry": {
+            "crs": {
+                "type": "name",
+                "properties": {
+                    "name": "EPSG:4326"
+                }
+            },
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0
+                    ]
+                ]
+            ]
+        },
+        "area": 100,
+        "createdAt": "2024-03-02T05:31:01.038Z",
+        "updatedAt": "2024-03-02T05:31:01.038Z",
+        "parentRegion": {
+            "id": "3f88bd70-c11d-4935-9d05-57639ceb4172",
+            "name": "Region1"
+        },
+        "subRegions": []
+    }
+]
