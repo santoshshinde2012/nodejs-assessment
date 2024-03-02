@@ -99,6 +99,14 @@
     - DELETE `/v1/crop-cycles/{cropCycleId}` Delete a specific crop-cycle.    
 
 
+- SSO 
+    - GET `/login/github` (Example:  `http://localhost:8080/login/github`)
+    - GET `/login/github/callback` (Example:  `http://localhost:8080//login/github/callback`)
+
+- Swagger [This will be available on Dev and Test Environment]
+
+    - GET `/docs` (Example:  `http://localhost:8080/docs`)
+
 ### Develop an API server
 
 - Database
@@ -117,3 +125,5 @@
     - Tried to cover positive and negative scenerio
     - Code Coverage Report
       ![ Code Coverage Report](./assets/unit-test.png)
+    - Sonar Cloud Scan [nodejs-assessment](https://sonarcloud.io/summary/overall?id=santoshshinde2012_nodejs-assessment)
+      ![ Sonar Cloud Scan Report](./assets/sonar.png)
