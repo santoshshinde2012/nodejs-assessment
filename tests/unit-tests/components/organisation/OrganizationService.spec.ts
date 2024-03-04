@@ -49,6 +49,17 @@ describe('OrganizationService', () => {
         expect(findByPk).toHaveBeenCalled();
     });
 
+    it('should throw error if failed to fetch empty organization by id', async () => {
+        const [organization] = organizations as OrganizationAttributes[];
+        const error = new Error('Organization not found');
+
+        const findByPk = jest.spyOn(Organization, 'findByPk');
+        findByPk.mockResolvedValueOnce(null);
+
+        await expect(service.getById(organization.id)).rejects.toThrow(error);
+        expect(logger.error).toHaveBeenCalledWith(error);
+    });
+
     it('should throw error if failed to fetch organization by id', async () => {
         const [organization] = organizations as OrganizationAttributes[];
         const error = new Error('Database error');

@@ -50,6 +50,7 @@ describe('PropertyService', () => {
         expect(findAll).toHaveBeenCalled();
     });
 
+    
     it('should throw error if failed to fetch properties', async () => {
         const error = new Error('Database error');
         const findAll = jest.spyOn(Property, 'findAll');
@@ -69,6 +70,17 @@ describe('PropertyService', () => {
 
         expect(result).toEqual(sequelizeProperty);
         expect(findByPk).toHaveBeenCalled();
+    });
+
+    it('should throw error if failed to fetch empty property by id', async () => {
+        const [property] = properties as PropertyAttributes[];
+        const error = new Error('Property not found');
+
+        const findByPk = jest.spyOn(Property, 'findByPk');
+        findByPk.mockResolvedValueOnce(null);
+
+        await expect(service.getById(property.id)).rejects.toThrow(error);
+        expect(logger.error).toHaveBeenCalledWith(error);
     });
 
     it('should throw error if failed to fetch property by id', async () => {

@@ -48,6 +48,17 @@ describe('FieldService', () => {
         expect(findByPk).toHaveBeenCalled();
     });
 
+    it('should throw error if failed to fetch empty field by id', async () => {
+        const [field] = fields as FieldAttributes[];
+        const error = new Error('Field not found');
+
+        const findByPk = jest.spyOn(Field, 'findByPk');
+        findByPk.mockResolvedValueOnce(null);
+
+        await expect(service.getById(field.id)).rejects.toThrow(error);
+        expect(logger.error).toHaveBeenCalledWith(error);
+    });
+
     it('should throw error if failed to fetch field by id', async () => {
         const [field] = fields as FieldAttributes[];
         const error = new Error('Database error');

@@ -46,6 +46,18 @@ describe('CropService', () => {
         expect(findByPk).toHaveBeenCalled();
     });
 
+    it('should throw error if failed to fetch empty crop by id', async () => {
+        const [crop] = crops as CropAttributes[];
+        const error = new Error('Crop not found');
+
+        const findByPk = jest.spyOn(Crop, 'findByPk');
+        findByPk.mockResolvedValueOnce(null);
+
+        await expect(service.getById(crop.id)).rejects.toThrow(error);
+        expect(logger.error).toHaveBeenCalledWith(error);
+    });
+
+
     it('should throw error if failed to fetch crop by id', async () => {
         const [crop] = crops as CropAttributes[];
         const error = new Error('Database error');

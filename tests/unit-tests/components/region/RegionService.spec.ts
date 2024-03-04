@@ -48,6 +48,17 @@ describe('RegionService', () => {
         expect(findByPk).toHaveBeenCalled();
     });
 
+    it('should throw error if failed to fetch empty region by id', async () => {
+        const [region] = regions as RegionAttributes[];
+        const error = new Error('Region not found');
+
+        const findByPk = jest.spyOn(Region, 'findByPk');
+         findByPk.mockResolvedValueOnce(null);
+
+        await expect(service.getById(region.id)).rejects.toThrow(error);
+        expect(logger.error).toHaveBeenCalledWith(error);
+    });
+
     it('should throw error if failed to fetch region by id', async () => {
         const [region] = regions as RegionAttributes[];
         const error = new Error('Database error');
