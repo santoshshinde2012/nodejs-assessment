@@ -142,6 +142,48 @@ describe('CropCycleService', () => {
         expect(createMock).toHaveBeenCalledWith(payload);
     });
 
+
+    it('should throw an error if both fieldId and propertyId are passed', async () => {
+        const payload: CropCycleCreationAttributes = {
+            id: "2b9eec45-fd45-488c-afb5-e8035e692228",
+            name: "CropCycle 1",
+            cropId: "71fb275d-da5c-48ea-b625-3ad60c6240df",
+            fieldId: "71fb275d-da5c-48ea-b625-3ad60c6240dg",
+            propertyId: "44b7ce74-68d4-4537-93e5-d7bfa3c6d57c",
+            plantingDate: "2024-02-29T18:30:00.000Z",
+            harvestDate: "2024-06-29T18:30:00.000Z",
+        };
+
+        const error = new Error('Either fieldId or propertyId must be provided');
+
+        const cropCycleService = new CropCycleService();
+
+        await expect(cropCycleService.create(payload)).rejects.toThrow(error);
+
+        expect(CropCycle.create).toHaveBeenCalledWith(payload);
+    });
+
+    it('should throw an error if both fieldId and propertyId are null', async () => {
+        const payload: CropCycleCreationAttributes = {
+            id: "2b9eec45-fd45-488c-afb5-e8035e692228",
+            name: "CropCycle 1",
+            cropId: "71fb275d-da5c-48ea-b625-3ad60c6240df",
+            fieldId: null,
+            propertyId: null,
+            plantingDate: "2024-02-29T18:30:00.000Z",
+            harvestDate: "2024-06-29T18:30:00.000Z",
+        };
+
+        const error = new Error('Either fieldId or propertyId must be provided');
+
+        const cropCycleService = new CropCycleService();
+
+        await expect(cropCycleService.create(payload)).rejects.toThrow(error);
+
+        expect(CropCycle.create).toHaveBeenCalledWith(payload);
+        expect(logger.error).toHaveBeenCalledWith(error);
+    });
+
     it('should throw error if failed to create cropCycle', async () => {
         const payload: CropCycleCreationAttributes = {
             id: "2b9eec45-fd45-488c-afb5-e8035e692228",
