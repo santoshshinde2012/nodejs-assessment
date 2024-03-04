@@ -3,6 +3,8 @@ import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 import BaseApi from '../BaseApi';
 import { PropertyService } from './PropertyService';
 import { PropertyAttributes } from '../../database/models/Property';
+import logger from '../../lib/logger';
+import ApiError from '../../abstractions/ApiError';
 
 /**
  * Property controller
@@ -44,7 +46,7 @@ export default class PropertyController extends BaseApi {
 				await this.propertyService.getAll();
 			res.locals.data = properties;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -67,7 +69,7 @@ export default class PropertyController extends BaseApi {
 				await this.propertyService.getById(id);
 			res.locals.data = property;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -93,7 +95,7 @@ export default class PropertyController extends BaseApi {
 				property,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -142,7 +144,7 @@ export default class PropertyController extends BaseApi {
 				status,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}

@@ -3,6 +3,7 @@ import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 import BaseApi from '../BaseApi';
 import { FieldService } from './FieldService';
 import { FieldAttributes } from '../../database/models/Field';
+import ApiError from '../../abstractions/ApiError';
 
 /**
  * Field controller
@@ -43,7 +44,7 @@ export default class FieldController extends BaseApi {
 			const fields: FieldAttributes[] = await this.fieldService.getAll();
 			res.locals.data = fields;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -65,7 +66,7 @@ export default class FieldController extends BaseApi {
 			const field: FieldAttributes = await this.fieldService.getById(id);
 			res.locals.data = field;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -93,7 +94,7 @@ export default class FieldController extends BaseApi {
 				field,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -141,7 +142,7 @@ export default class FieldController extends BaseApi {
 				status,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}

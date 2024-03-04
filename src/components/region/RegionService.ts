@@ -34,6 +34,9 @@ export class RegionService {
 	async getById(id: string | number): Promise<RegionAttributes> {
 		try {
 			const region = await Region.findByPk(id);
+			if (!region) {
+				throw new ApiError('Region not found', StatusCodes.NOT_FOUND);
+			}
 			return region;
 		} catch (error) {
 			logger.error(error);

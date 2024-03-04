@@ -33,8 +33,11 @@ export class CropCycleService {
 
 	async getById(id: string | number): Promise<CropCycleAttributes> {
 		try {
-			const cropCycleField = await CropCycle.findByPk(id);
-			return cropCycleField;
+			const cropCycle = await CropCycle.findByPk(id);
+			if (!cropCycle) {
+				throw new ApiError('CropCycle not found', StatusCodes.NOT_FOUND);
+			}
+			return cropCycle;
 		} catch (error) {
 			logger.error(error);
 			throw error;
@@ -46,14 +49,14 @@ export class CropCycleService {
 		payload: Partial<CropCycleCreationAttributes>,
 	): Promise<CropCycleAttributes> {
 		try {
-			const cropCycleField = await CropCycle.findByPk(id);
-			if (!cropCycleField) {
+			const cropCycle = await CropCycle.findByPk(id);
+			if (!cropCycle) {
 				throw new ApiError(
 					'CropCycle not found',
 					StatusCodes.NOT_FOUND,
 				);
 			}
-			const updatedCropCycle = await cropCycleField.update(payload);
+			const updatedCropCycle = await cropCycle.update(payload);
 			return updatedCropCycle;
 		} catch (error) {
 			logger.error(error);
@@ -65,8 +68,8 @@ export class CropCycleService {
 		payload: CropCycleCreationAttributes,
 	): Promise<CropCycleAttributes> {
 		try {
-			const cropCycleField = await CropCycle.create(payload);
-			return cropCycleField;
+			const cropCycle = await CropCycle.create(payload);
+			return cropCycle;
 		} catch (error) {
 			logger.error(error);
 			throw error;

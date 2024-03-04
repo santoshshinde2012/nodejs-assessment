@@ -3,6 +3,7 @@ import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 import BaseApi from '../BaseApi';
 import { RegionService } from './RegionService';
 import { RegionAttributes } from '../../database/models/Region';
+import ApiError from '../../abstractions/ApiError';
 
 /**
  * Region controller
@@ -44,7 +45,7 @@ export default class RegionController extends BaseApi {
 				await this.regionService.getAll();
 			res.locals.data = regions;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -67,7 +68,7 @@ export default class RegionController extends BaseApi {
 				await this.regionService.getById(id);
 			res.locals.data = region;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -95,7 +96,7 @@ export default class RegionController extends BaseApi {
 				region,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -144,7 +145,7 @@ export default class RegionController extends BaseApi {
 				status,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}

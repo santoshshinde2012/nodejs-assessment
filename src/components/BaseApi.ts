@@ -1,4 +1,4 @@
-import { Response, Router } from 'express';
+import { Response, Router, NextFunction } from 'express';
 import { StatusCodes } from 'http-status-codes';
 
 /**

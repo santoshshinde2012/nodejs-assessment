@@ -11,7 +11,7 @@
     "lint-fix": "eslint --fix src/**/*.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "husky",
-    "test:custom": "npm test -- tests/unit-tests/components/crop_cycle/",
+    "test:custom": "npm test -- tests/integration-tests",
     "precommit": "npm run lint-fix && npm run format",
     "prepush": "npm run lint ",
     "test": "jest --coverage",

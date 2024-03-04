@@ -3,6 +3,8 @@ import CropController from '../../../../src/components/crop/CropController';
 import { CropService } from '../../../../src/components/crop/CropService';
 import crops from '../../data/crops.json';
 import { CropAttributes } from '../../../../src/database/models/Crop';
+import ApiError from '../../../../src/abstractions/ApiError';
+import { StatusCodes } from 'http-status-codes';
 
 describe('Crop Controller', () => {
     let request: Partial<Request>;
@@ -67,7 +69,7 @@ describe('Crop Controller', () => {
         expect(locals?.data).toBeDefined();
     });
 
-    it('should handle errors to get all crops', async () => {
+    it('should handle errors to get specific crop', async () => {
         const error = new Error('Internal Server Error');
         const getById = jest.spyOn(CropService.prototype, 'getById');
         getById.mockRejectedValueOnce(error);

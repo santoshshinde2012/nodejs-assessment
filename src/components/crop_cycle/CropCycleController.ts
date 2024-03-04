@@ -3,6 +3,7 @@ import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 import BaseApi from '../BaseApi';
 import { CropCycleService } from './CropCycleService';
 import { CropCycleAttributes } from '../../database/models/CropCycle';
+import ApiError from '../../abstractions/ApiError';
 
 /**
  * CropCycle controller
@@ -44,7 +45,7 @@ export default class CropCycleController extends BaseApi {
 				await this.cropCycleFieldService.getAll();
 			res.locals.data = cropCycleFields;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -63,11 +64,11 @@ export default class CropCycleController extends BaseApi {
 	): Promise<void> {
 		try {
 			const id = req.params.id;
-			const cropCycleField: CropCycleAttributes =
+			const cropCycle: CropCycleAttributes =
 				await this.cropCycleFieldService.getById(id);
-			res.locals.data = cropCycleField;
+			res.locals.data = cropCycle;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -93,7 +94,7 @@ export default class CropCycleController extends BaseApi {
 				cropCycle,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -142,7 +143,7 @@ export default class CropCycleController extends BaseApi {
 				status,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}

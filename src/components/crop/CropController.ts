@@ -40,10 +40,10 @@ export default class CropController extends BaseApi {
 		next: NextFunction,
 	): Promise<void> {
 		try {
-			const enquiries: CropAttributes[] = await this.cropService.getAll();
-			res.locals.data = enquiries;
+			const crops: CropAttributes[] = await this.cropService.getAll();
+			res.locals.data = crops;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -65,7 +65,7 @@ export default class CropController extends BaseApi {
 			const crop: CropAttributes = await this.cropService.getById(id);
 			res.locals.data = crop;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -93,7 +93,7 @@ export default class CropController extends BaseApi {
 				crop,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -141,7 +141,7 @@ export default class CropController extends BaseApi {
 				status,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}

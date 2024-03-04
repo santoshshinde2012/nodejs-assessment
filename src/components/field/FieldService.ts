@@ -21,6 +21,9 @@ export class FieldService {
 	async getById(id: string | number): Promise<FieldAttributes> {
 		try {
 			const field = await Field.findByPk(id);
+			if (!field) {
+				throw new ApiError('Field not found', StatusCodes.NOT_FOUND);
+			}
 			return field;
 		} catch (error) {
 			logger.error(error);

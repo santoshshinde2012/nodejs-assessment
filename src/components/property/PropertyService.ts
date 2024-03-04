@@ -63,6 +63,9 @@ export class PropertyService {
 					},
 				],
 			});
+			if(!property) {
+				throw new ApiError('Property not found', StatusCodes.NOT_FOUND);
+			}
 			return property;
 		} catch (error) {
 			logger.error(error);

@@ -21,6 +21,9 @@ export class CropService {
 	async getById(id: string | number): Promise<CropAttributes> {
 		try {
 			const crop = await Crop.findByPk(id);
+			if (!crop) {
+				throw new ApiError('Crop not found', StatusCodes.NOT_FOUND);
+			}
 			return crop;
 		} catch (error) {
 			logger.error(error);

@@ -29,6 +29,9 @@ export class OrganizationService {
 	async getById(id: string | number): Promise<OrganizationAttributes> {
 		try {
 			const organization = await Organization.findByPk(id);
+			if (!organization) {
+				throw new ApiError('Organization not found', StatusCodes.NOT_FOUND);
+			}
 			return organization;
 		} catch (error) {
 			logger.error(error);

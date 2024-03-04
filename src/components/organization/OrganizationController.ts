@@ -52,7 +52,7 @@ export default class OrganizationController extends BaseApi {
 				await this.organizationService.getAll();
 			res.locals.data = organizations;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -75,7 +75,7 @@ export default class OrganizationController extends BaseApi {
 				await this.organizationService.getById(id);
 			res.locals.data = organization;
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -101,7 +101,7 @@ export default class OrganizationController extends BaseApi {
 				organization,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -156,7 +156,7 @@ export default class OrganizationController extends BaseApi {
 				status,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
@@ -183,7 +183,7 @@ export default class OrganizationController extends BaseApi {
 				properties,
 			};
 			// call base class method
-			super.send(res);
+			this.send(res);
 		} catch (err) {
 			next(err);
 		}
